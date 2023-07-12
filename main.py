@@ -39,9 +39,27 @@ def disemvowel(string_):
     return finished_string
 
 
-print(disemvowel("No offense but, Your writing is among the worst I've ever read"))
+# print(disemvowel("No offense but, Your writing is among the worst I've ever read"))
 
 
+# Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013).
+# Jaden is also known for some of his philosophy that he delivers via Twitter.
+# When writing on Twitter, he is known for almost always capitalizing every word.
+# For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
+
+# Your task is to convert strings to how they would be written by Jaden Smith.
+# The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+def to_jadan_case(string):
+    string_list = list(string)
+    jaden_string = ''
+    prev_char = ' '
+    for char in string_list:
+        if prev_char == ' ':
+            jaden_string += char.upper()
+        else:
+            jaden_string += char.lower()
+        prev_char = char
+    return jaden_string
 
 
-
+print(to_jadan_case("How can mirrors be real if our eyes aren't real"))
